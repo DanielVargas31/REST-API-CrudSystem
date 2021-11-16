@@ -5,7 +5,7 @@ import  employeeController  from '../controllers/employeeController'
 
 
 
-class EmployeeRoutes{
+class EmployeesRoutes{
 
     public router: Router = Router();
 
@@ -16,13 +16,13 @@ class EmployeeRoutes{
 
     config(): void{
        this.router.get('/', employeeController.list)
-       this.router.get('/:id', employeeController.getOne)
+       this.router.get('/employee/:id', employeeController.getOne)
        this.router.post('/', employeeController.create)
-       this.router.put('/:id', employeeController.update)
-       this.router.delete('/:id', employeeController.delete)
+       this.router.put('/employee/:id', employeeController.update)
+       this.router.delete('/employee/:id', employeeController.delete)
 
     }
 }
 
-const employeeRoutes = new EmployeeRoutes();
+const employeeRoutes = new EmployeesRoutes();
 export default employeeRoutes.router;

@@ -1,0 +1,14 @@
+<div class="row" style="padding: 10rem">
+<div class="card" style="width: 18rem;" *ngFor="let employee of resEmployees">
+  <a href="#" class="btn btn-primary ">Edit</a>
+  <img [src]="employee.image" class="card-img-top" alt="..." style="height: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{employee.nombres}}&nbsp;{{employee.apellidos}}</h5>
+      <h6 class="card-title">{{employee.tipoId}}</h6>
+      <h6 class="card-title">{{employee.nroId}}</h6>
+      <p class="card-text">{{employee.area}}</p>
+    </div>
+  <a href="#" class="btn btn-danger btn-block">Delete</a>
+</div>
+</div>
+
