@@ -17,16 +17,16 @@ export class EmployeesService {
     return this.http.get(`${this.API_URI}/employees`);
   }
   getEmployee(id : string){
-     return this.http.get(`${this.API_URI}/emloyees/${id}`);
+     return this.http.get(`${this.API_URI}/employees/${id}`);
   }
   saveEmployee(employee : Employee){
     return this.http.post(`${this.API_URI}/employees`, employee);
   }
-  updateGame(id : string, updatedEmployee: Employee): Observable<Employee>{
+  updateEmployee(id : any, updatedEmployee: Employee): Observable<Employee>{
     return this.http.put( `${this.API_URI}/employees/${id}`, updatedEmployee)
   }
   deleteEmployee(id : string){
     return this.http.delete(`${this.API_URI}/employees/${id}`);
   }
-  
+
 }

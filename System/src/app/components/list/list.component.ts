@@ -14,11 +14,24 @@ export class ListComponent implements OnInit {
   constructor(private employeesService: EmployeesService) { }
 
   ngOnInit() {
+    this.getEmployees();
+  }
+  getEmployees() {
     this.employeesService.getEmployees().subscribe(
       res => {
         this.resEmployees = res;
       },
       err => console.error(err)
+    );
+
+  }
+  deleteEmployee(id: string) {
+    this.employeesService.deleteEmployee(id).subscribe(
+      res=> {
+      console.log(res);
+      this.getEmployees();
+    },
+    err => console.error(err)
     );
   }
 }

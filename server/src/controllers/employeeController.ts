@@ -21,8 +21,7 @@ class EmployeeController{
             return res.json(employees[0]);
         }
         res.status(404).json({text: 'Not Founded Employee'});
-        
-    }
+        }
     //Metodo para insertar empleado a la DB
     public async create (req: Request, res: Response): Promise <void> {
         //"[req.body]" para enviar y recibir datos en formato de json

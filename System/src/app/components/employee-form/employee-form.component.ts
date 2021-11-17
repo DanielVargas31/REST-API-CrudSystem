@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from '../../models/Employee';
 import { EmployeesService } from '../../services/employees.service'
+import { ActivatedRoute,Router } from '@angular/router'
 
 @Component({
   selector: 'app-employee-form',
@@ -18,22 +19,55 @@ export class EmployeeFormComponent implements OnInit {
     area: '',
     image: ''
   }
- 
-  constructor(private employeesService: EmployeesService) { }
+
+  edit: boolean = false;
+
+
+
+  constructor(
+    private employeesService: EmployeesService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute
+    ) { }
 
   ngOnInit(): void {
+    const params = this.activatedRoute.snapshot.params;
+
+    if (params['id']){
+      this.employeesService.getEmployee(params['id']).subscribe(
+        res => {
+          console.log(res)
+          this.employee = res;
+          this.edit = true;
+        },
+        err => console.error(err)
+      )
+    }
   }
 
-  saveEmployee(){
+  saveEmployee() {
 
     delete this.employee.id;
-    
+
     this.employeesService.saveEmployee(this.employee).subscribe(
     res => {
       console.log(res)
+      this.router.navigate(['/empleados'])
     },
     err => console.error(err)
     );
   }
+  updateEmployee(){
+
+    this.employeesService.updateEmployee(this.employee.id, this.employee).subscribe(
+      res => {
+        console.log(res)
+        this.router.navigate(['/empleados'])
+      },
+      err => console.error(err)
+    );
+  }
+
+
 
 }

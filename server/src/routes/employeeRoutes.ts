@@ -11,10 +11,10 @@ class EmployeesRoutes{
      //Metodo para definir rutas y peticiones dentro de la API 
     config(): void{
        this.router.get('/', employeeController.list)
-       this.router.get('/employee/:id', employeeController.getOne)
+       this.router.get('/:id', employeeController.getOne)
        this.router.post('/', employeeController.create)
-       this.router.put('/employee/:id', employeeController.update)
-       this.router.delete('/employee/:id', employeeController.delete)
+       this.router.put('/:id', employeeController.update)
+       this.router.delete('/:id', employeeController.delete)
     }
 }
 //Inicializando Clase del Enrutador

@@ -9,9 +9,9 @@ import { ListComponent } from './components/list/list.component';
 const routes: Routes = [
   {
     path:'',
-    redirectTo:'/employees',
+    redirectTo:'/home',
     pathMatch:'full',
-    
+
   },
 
   {
@@ -26,8 +26,11 @@ const routes: Routes = [
   {
     path:'empleados/add',
     component: EmployeeFormComponent
+  },
+  {
+    path:'empleados/edit/:id',
+    component: EmployeeFormComponent
   }
-
 
 ];
 
