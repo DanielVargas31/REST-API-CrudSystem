@@ -10,6 +10,7 @@ class EmployeesRoutes {
         this.router = (0, express_1.Router)();
         this.config();
     }
+    //Metodo para definir rutas y peticiones dentro de la API 
     config() {
         this.router.get('/', employeeController_1.default.list);
         this.router.get('/employee/:id', employeeController_1.default.getOne);
@@ -18,5 +19,6 @@ class EmployeesRoutes {
         this.router.delete('/employee/:id', employeeController_1.default.delete);
     }
 }
+//Inicializando Clase del Enrutador
 const employeeRoutes = new EmployeesRoutes();
 exports.default = employeeRoutes.router;

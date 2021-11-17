@@ -6,6 +6,6 @@ exports.default = {
         user: 'root',
         password: '',
         database: 'ng_employee_db',
-        port: 33065
+        port: 3306
     }
 };

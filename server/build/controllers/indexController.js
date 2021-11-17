@@ -6,4 +6,5 @@ class IndexController {
         res.send('Mensaje Bienvenida Sistema Empleados');
     }
 }
+//Exportando Controlador
 exports.indexController = new IndexController();

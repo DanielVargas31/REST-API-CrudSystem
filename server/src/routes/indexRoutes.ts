@@ -7,14 +7,13 @@ class IndexRoutes{
 
     constructor(){
         this.config();
-
     }
-
+    //Metodo para definir rutas dentro de la API en en router
     config(): void{
        this.router.get('/', indexController.index)
 
     }
 }
-
+//Instanciando clase del Enrutador
 const indexRoutes = new IndexRoutes();
 export default indexRoutes.router;
