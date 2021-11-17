@@ -1,6 +1,6 @@
-<div class="row col-md-12" style="padding: 1rem;">
-<div class="card" style="padding:1.5rem;margin: 1rem; width: 18rem;" *ngFor="let employee of resEmployees">
-  <img [src]="employee.image" class="card-img-top" alt="..." style="height: 15rem;">
+<div class="row" style="">
+<div class="card  bg-dark" style="padding:2rem;margin: 1rem 0.5rem; width: 18rem;border-radius:0.8rem;" *ngFor="let employee of resEmployees">
+  <img [src]="employee.image" class="" alt="..." style="height: 15rem;border-radius:0.8rem;">
     <div class="card-body">
       <h5 class="card-title">{{employee.nombres}}&nbsp;{{employee.apellidos}}</h5>
       <h6 class="card-title">{{employee.tipoId}}</h6>
@@ -8,8 +8,8 @@
       <p class="card-text">{{employee.area}}</p>
     </div>
     <div class="row" >
-      <a [routerLink]="['/empleados/edit', employee.id]" class="btn btn-primary btn-block" >Editar</a>
-      <button (click)="deleteEmployee(employee.id)" class="btn-danger btn-block">Eliminar</button>
+      <a [routerLink]="['/empleados/edit', employee.id]" class="btn btn-outline-info btn-block"  >Editar</a>
+      <button (click)="deleteEmployee(employee.id)" class="btn btn-outline-danger btn-block">Eliminar</button>
     </div>
   </div>
 </div>

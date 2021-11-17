@@ -1,6 +1,6 @@
-<div class="row">
-<div class="col-md-4 offset-md-2">
-    <div class="card">
+<div class="row" style="margin-top:1rem;">
+<div class="col-md-6">
+    <div class="card bg-dark" style="border-radius:0.8rem;">
         <div class="card-body">
             <form action="">
                 <div class="form-group p-1">
@@ -19,19 +19,19 @@
                     <input type="text" [(ngModel)]="employee.area" name="area" placeholder="Area" class="form-control" >
                 </div>
                 <div class="form-group p-1">
-                    <input type="url" [(ngModel)]="employee.image" name="image" placeholder="Foto" class="form-control" >
+                    <input type="url" [(ngModel)]="employee.image" name="image" placeholder="Url Foto" class="form-control" >
                 </div>
-                <button class="btn btn-success btn-block" (click)="edit ? updateEmployee() : saveEmployee()">
+                <button class="btn btn-outline-success btn-block" (click)="edit ? updateEmployee() : saveEmployee()">
                     Guardar</button>
             </form>
         </div>
     </div>
 </div>
 
-<div class="col-md-4">
-    <div class="card card-body card-img-top" style="width: 18rem;" >
-        <img [src]="employee.image == '' ? '/assets/no-photo.jpg' : employee.image"   style="height: 15rem;">
-            <h5 class="card-title">{{employee.nombres}}&nbsp;{{employee.apellidos}}</h5>
+<div class="col-md-6">
+    <div class="card bg-dark card-body " style="width: 18rem;border-radius:0.8rem;" >
+        <img [src]="employee.image == '' ? '/assets/no-photo.jpg' : employee.image"  class="card-img-top card-img-bottom" style="height: 15rem;border-radius:0.8rem;">
+            <h5 class="card-title ">{{employee.nombres}}&nbsp;{{employee.apellidos}}</h5>
             <h6 class="card-title">{{employee.tipoId}}</h6>
             <h6 class="card-title">{{employee.nroId}}</h6>
             <p class="card-text">{{employee.area}}</p>
