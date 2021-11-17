@@ -1,13 +1,12 @@
 
- <div class="container ">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-danger"style="border-bottom-left-radius:2rem;border-bottom-right-radius:2rem;">
-    <div class="container-fluid">
-      <a class="navbar-brand" routerLink="/home">E-System</a>
-        <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" routerLink="/home">Inicio</a>
-        <a class="nav-link" routerLink="/empleados">Mis Empleados</a>
-        <a class="nav-link" routerLink="/empleados/add">Nuevo Empleado</a>
-        </div>
-    </div>
-  </nav>
+ <div class="header">
+  <div class="menu-circle"></div>
+  <div class="header-menu">
+   <a class="menu-link is-active" routerLink="/home">Home</a>
+   <a class="menu-link notify" class="nav-link" routerLink="/empleados">Your Employees </a>
+   <a class="menu-link" class="nav-link" routerLink="/empleados/add">New Employee</a>
+  </div>
+  <div class="search-bar">
+   <input type="text" placeholder="Search">
+  </div>
  </div>

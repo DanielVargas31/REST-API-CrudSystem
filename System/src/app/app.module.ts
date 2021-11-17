@@ -12,6 +12,7 @@ import { ControlPanelComponent } from './components/control-panel/control-panel.
 import { HelloComponent } from './components/hello/hello.component';
 import { ListComponent } from './components/list/list.component';
 import { EmployeesService } from './services/employees.service';
+import { PruebaComponent } from './components/prueba/prueba.component';
 
 
 
@@ -23,7 +24,8 @@ import { EmployeesService } from './services/employees.service';
     EmployeeFormComponent,
     ControlPanelComponent,
     HelloComponent,
-    ListComponent
+    ListComponent,
+    PruebaComponent
   ],
   imports: [
     BrowserModule,

@@ -1,16 +1,29 @@
-<div class="row" style="">
-<div class="card  bg-dark" style="padding:2rem;margin: 1rem 0.5rem; width: 18rem;border-radius:0.8rem;" *ngFor="let employee of resEmployees">
-  <img [src]="employee.image" class="" alt="..." style="height: 15rem;border-radius:0.8rem;">
-    <div class="card-body">
-      <h5 class="card-title">{{employee.nombres}}&nbsp;{{employee.apellidos}}</h5>
-      <h6 class="card-title">{{employee.tipoId}}</h6>
-      <h6 class="card-title">{{employee.nroId}}</h6>
-      <p class="card-text">{{employee.area}}</p>
-    </div>
-    <div class="row" >
-      <a [routerLink]="['/empleados/edit', employee.id]" class="btn btn-outline-info btn-block"  >Editar</a>
-      <button (click)="deleteEmployee(employee.id)" class="btn btn-outline-danger btn-block">Eliminar</button>
-    </div>
-  </div>
+<div class="row">
+  <ul class="lista">
+    <li  *ngFor="let employee of resEmployees">
+      <div class="products">
+        <img
+          [src]="employee.image"
+          class=""
+          alt="..."
+          style="width: 150px; height: 150px; border-radius: 10%"
+        />
+        <div class="card-content">
+          <h4 class="">{{ employee.nombres }}&nbsp;{{ employee.apellidos }}</h4>
+          <p class="">{{ employee.tipoId }}</p>
+          <p class="">{{ employee.nroId }}</p>
+          <p class="">{{ employee.area }}</p>
+          <button
+            [routerLink]="['/empleados/edit', employee.id]"
+            class="content-button"
+          >
+            Edit
+          </button>
+          <button (click)="deleteEmployee(employee.id)" class="content-button">
+            Delete
+          </button>
+        </div>
+      </div>
+    </li>
+  </ul>
 </div>
-

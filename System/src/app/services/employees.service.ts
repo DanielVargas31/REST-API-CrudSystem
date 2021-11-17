@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Employee } from '../models/Employee'
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
@@ -9,7 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class EmployeesService {
 
-  API_URI = 'http://localhost:3000/api';
+  API_URI = environment.API_URI;
 
   constructor(private http: HttpClient) { }
 

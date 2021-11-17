@@ -1,5 +1,5 @@
 export class Employee {
-    id?:number;
+    id?:number| undefined;
     tipoId?:string;
     nroId?: string;
     nombres?: string;
@@ -7,4 +7,6 @@ export class Employee {
     area?: string;
     image?: string;
 }
+
+//
 
