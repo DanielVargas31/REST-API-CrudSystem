@@ -1,18 +1,18 @@
 <div class="row">
   <ul class="lista">
     <li  *ngFor="let employee of resEmployees">
-      <div class="products">
+      <div class="products1">
         <img
           [src]="employee.image"
           class=""
           alt="..."
-          style="width: 150px; height: 150px; border-radius: 10%"
+          style="width: 180px; height: 180px; border-radius: 50%; padding :10px; border:1px solid rgba(255, 255, 255, 0.233)"
         />
         <div class="card-content">
           <h4 class="">{{ employee.nombres }}&nbsp;{{ employee.apellidos }}</h4>
           <p class="">{{ employee.tipoId }}</p>
           <p class="">{{ employee.nroId }}</p>
-          <p class="">{{ employee.area }}</p>
+          <p class="">{{ employee.area }}</p><hr style="margin-top: 0.5rem;border-color: rgba(255, 255, 255, 0.233);">
           <button
             [routerLink]="['/empleados/edit', employee.id]"
             class="content-button"

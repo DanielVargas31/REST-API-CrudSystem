@@ -1,50 +1,99 @@
-<div class="row">
-    <div class="products" >
-        <div class="products">
-                <label for ="inp" class="inp">
-                    <input  id="inp" type="text" [(ngModel)]="employee.nombres" name="nombres" placeholder="&nbsp;"  >
-                    <span class="label">Nombres</span>
-                    <span class="focus-bg"></span>
-                </label>
-                <label for ="inp" class="inp">
-                    <input id="inp" type="text" [(ngModel)]="employee.apellidos" name="apellidos" placeholder="&nbsp;"   >
-                    <span class="label">Apellidos</span>
-                    <span class="focus-bg"></span>
-                </label>
-                <label for ="inp" class="inp">
-                    <input id="inp" type="text" [(ngModel)]="employee.tipoId" name="tipoId"  placeholder="&nbsp;"   >
-                    <span class="label">Tipo de Identificacion</span>
-                    <span class="focus-bg"></span>
-                </label>
-                <label for ="inp" class="inp">
-                    <input id="inp" type="text" [(ngModel)]="employee.nroId" name="nroId"  placeholder="&nbsp;"  >
-                    <span class="label">Nro de Identificacion</span>
-                    <span class="focus-bg"></span>
-                </label>
-                <label for ="inp" class="inp">
-                    <input id="inp" type="text" [(ngModel)]="employee.area" name="area" placeholder="&nbsp;" >
-                    <span class="label">Area</span>
-                    <span class="focus-bg"></span>
-                </label>
-                <label for ="inp" class="inp">
-                    <input id="inp" type="url" [(ngModel)]="employee.image" name="image"  placeholder="&nbsp;"  >
-                    <span class="label">Url de la Foto</span>
-                    <span class="focus-bg"></span>
-                </label>
-                <button class="content-button" (click)="edit ? updateEmployee() : saveEmployee()">
-                    Guardar</button>
-        </div>
-    </div>
 
-
-    <div class="products" >
-      <div class="card-content">
-        <img [src]="employee.image == '' ? '/assets/no-photo.jpg' : employee.image"  class="" style="width: 300px; height: 300px; border-radius: 10%">
-            <h6 class="card-title ">{{employee.nombres}}&nbsp;{{employee.apellidos}}</h6>
-            <p class="card-title">{{employee.tipoId}}</p>
-            <p class="card-title">{{employee.nroId}}</p>
-            <p class="card-text">{{employee.area}}</p>
-          </div>
+<div class="form-content">
+    <div class="products">
+      <div class="form">
+        <label for="inp" class="inp">
+          <input
+            id="inp"
+            type="text"
+            [(ngModel)]="employee.nombres"
+            name="nombres"
+            placeholder="&nbsp;"
+          />
+          <span class="label">Nombres</span>
+          <span class="focus-bg"></span>
+        </label>
+        <label for="inp" class="inp">
+          <input
+            id="inp"
+            type="text"
+            [(ngModel)]="employee.apellidos"
+            name="apellidos"
+            placeholder="&nbsp;"
+          />
+          <span class="label">Apellidos</span>
+          <span class="focus-bg"></span>
+        </label>
+        <label for="inp" class="inp">
+          <input
+            id="inp"
+            type="text"
+            [(ngModel)]="employee.tipoId"
+            name="tipoId"
+            placeholder="&nbsp;"
+          />
+          <span class="label">Tipo de Identificacion</span>
+          <span class="focus-bg"></span>
+        </label>
+        <label for="inp" class="inp">
+          <input
+            id="inp"
+            type="text"
+            [(ngModel)]="employee.nroId"
+            name="nroId"
+            placeholder="&nbsp;"
+          />
+          <span class="label">Nro de Identificacion</span>
+          <span class="focus-bg"></span>
+        </label>
+        <label for="inp" class="inp">
+          <input
+            id="inp"
+            type="text"
+            [(ngModel)]="employee.area"
+            name="area"
+            placeholder="&nbsp;"
+          />
+          <span class="label">Area</span>
+          <span class="focus-bg"></span>
+        </label>
+        <label for="inp" class="inp">
+          <input
+            id="inp"
+            type="url"
+            [(ngModel)]="employee.image"
+            name="image"
+            placeholder="&nbsp;"
+          />
+          <span class="label">Url de la Foto</span>
+          <span class="focus-bg"></span>
+        </label>
+        <div>
+          <br>
+          <button
+          class="content-button"
+          (click)="edit ? updateEmployee() : saveEmployee()">
+          Guardar
+        </button>
       </div>
     </div>
+    <div class="card">
+      <img
+        [src]="employee.image == '' ? '/assets/no-photo.jpg' : employee.image"
+        class=""
+        style="width: 300px; height: 300px; border-radius: 10%"
+      />
+      <h2 class="card-title">
+        {{ employee.nombres }}&nbsp;{{ employee.apellidos }}
+      </h2>
+      <h3 class="card-title">{{ employee.tipoId }}</h3>
+      <h3 class="card-title">{{ employee.nroId }}</h3>
+      <h3 class="card-text">{{ employee.area }}</h3>
+    </div>
+    </div>
+  </div>
+
+
+
+
 

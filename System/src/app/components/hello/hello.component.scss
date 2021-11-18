@@ -1,0 +1,23 @@
+.image{
+  background-color: var(--background);
+  display: grid;
+  place-items: center;
+}
+h1{
+ 
+    z-index: 2;
+    background: linear-gradient(to right top, #74f5e473, #0dfcb0ab);
+    border-radius: 15px;
+    padding: 10px 40px;
+}
+
+#helloi{
+  background-color:var(--theme-bg-color);
+  width: 55%;
+  height:auto;
+  border-radius:15px;
+
+
+}
+
+
